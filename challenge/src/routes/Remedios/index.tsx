@@ -19,39 +19,53 @@ export default function Remedios() {
     fetchRemedios();
   }, []);
 
-  return (
-    <main>
-      <h1 className="bg-[#e6f9fc] text-3xl space-y-4 p-4 text-cyan-700">
-        Rémedios
-      </h1>
-      <section className="bg-[#e6f9fc] ">
-        <table className="tabela">
-          <thead>
+ return (
+  <main>
+    <h1 className="bg-[#e6f9fc] text-2xl sm:text-3xl font-bold p-4 text-cyan-700 text-center sm:text-left">
+      Rémedios
+    </h1>
+
+    <section className="bg-[#e6f9fc] h-159 p-4 sm:p-6 flex justify-center">
+      <div className="overflow-x-auto w-full max-w-5xl">
+        <table className="min-w-full border border-gray-300 text-sm sm:text-base bg-[#18738099] rounded-md shadow-md">
+          <thead className="bg-cyan-700 text-white">
             <tr>
-              <th>ID</th>
-              <th>NOME</th>
-              <th>PREÇO</th>
+              <th className="px-3 sm:px-6 py-2 text-left">ID</th>
+              <th className="px-3 sm:px-6 py-2 text-left">NOME</th>
+              <th className="px-3 sm:px-6 py-2 text-left">PREÇO</th>
+              <th className="px-3 sm:px-6 py-2 text-left">AÇÕES</th>
             </tr>
           </thead>
           <tbody>
             {remedios.map((remedios, id) => (
-              <tr key={id}>
-                <td>{remedios.id}</td>
-                <td>{remedios.nome}</td>
-                <td>{remedios.preco}</td>
-                <td>
-                  <Link to={`/visualizar/remedios/${remedios.id}`}>Ver</Link>
+              <tr
+                key={id}
+                className="border-b hover:bg-[#18738099] transition-colors"
+              >
+                <td className="px-3 sm:px-6 py-2">{remedios.id}</td>
+                <td className="px-3 sm:px-6 py-2">{remedios.nome}</td>
+                <td className="px-3 sm:px-6 py-2">{remedios.preco}</td>
+                <td className="px-3 sm:px-6 py-2">
+                  <Link
+                    to={`/visualizar/remedios/${remedios.id}`}
+                    className="text-cyan-900 hover:underline"
+                  >
+                    Ver
+                  </Link>
                 </td>
               </tr>
             ))}
           </tbody>
-          <tfoot>
+          <tfoot className="bg-[#71aab399]  text-gray-700 font-medium">
             <tr>
-              <td colSpan={2}>Todos os Rémedios: {remedios.length}</td>
+              <td colSpan={2} className="px-3 sm:px-6 py-2">
+                Todos os Rémedios: {remedios.length}
+              </td>
             </tr>
           </tfoot>
         </table>
-      </section>
-    </main>
-  );
+      </div>
+    </section>
+  </main>
+);
 }
