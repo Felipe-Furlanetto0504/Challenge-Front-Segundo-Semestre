@@ -72,7 +72,7 @@ export default function Menu() {
           className="hover:text-gray-200 transition"
           onClick={() => setMenuAberto(false)}
         >
-          Agendar Exame
+          Agendar Consulta
         </Link>
       </div>
     </nav>
