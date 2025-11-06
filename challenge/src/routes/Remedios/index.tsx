@@ -25,7 +25,7 @@ export default function Remedios() {
       Rémedios
     </h1>
 
-    <section className="bg-[#e6f9fc] h-159 p-4 sm:p-6 flex justify-center">
+    <section className="bg-[#e6f9fc] min-h-screen min-w-screen p-4 sm:p-6 flex justify-center">
       <div className="overflow-x-auto w-full max-w-5xl">
         <table className="min-w-full border border-gray-300 text-sm sm:text-base bg-[#18738099] rounded-md shadow-md">
           <thead className="bg-cyan-700 text-white">

@@ -11,7 +11,7 @@ export default function Sobre() {
       Sobre
     </h1>
 
-    <div className="flex justify-center items-center p-4 sm:p-6 bg-[#e6f9fc] h-153">
+    <div className="flex justify-center items-center p-4 sm:p-6 bg-[#e6f9fc] min-h-screen min-w-screen">
       <section className="w-full max-w-3xl bg-white border border-black rounded-md shadow-md p-4 sm:p-6 leading-relaxed space-y-4">
         <p className="text-justify text-gray-800 text-sm sm:text-base">
           O Hospital das Clínicas tem como missão oferecer cuidado de

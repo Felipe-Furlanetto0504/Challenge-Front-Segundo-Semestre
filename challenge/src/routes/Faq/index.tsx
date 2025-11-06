@@ -11,7 +11,7 @@ return (
       Faq
     </h1>
 
-    <section className="space-y-4 sm:space-y-6 p-4 sm:p-6 bg-[#e6f9fc] h-153 flex flex-col items-center">
+    <section className="space-y-4 sm:space-y-6 p-4 sm:p-6 bg-[#e6f9fc] min-h-screen min-w-screen flex flex-col items-center">
       <div className="bg-[#28659b] border border-black rounded-md p-3 sm:p-4 w-full max-w-3xl text-white shadow-md">
         <h2 className="font-bold text-lg sm:text-xl">Como agendar uma consulta no HC?</h2>
         <p className="text-sm sm:text-base">
