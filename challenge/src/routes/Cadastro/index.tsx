@@ -3,8 +3,6 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import type { Cadastro } from "../../types/cadastro";
 
-
-
 export default function Cadastro() {
   const navigate = useNavigate();
   const {
@@ -28,7 +26,6 @@ export default function Cadastro() {
 
       if (!response.ok) throw new Error("Erro ao cadastrar");
 
-      // Exibe o aviso de sucesso antes de redirecionar
       setSuccessMessage("Cadastro realizado");
       setTimeout(() => {
         navigate("/remedios");
@@ -81,6 +78,13 @@ export default function Cadastro() {
               })}
               className="mt-2 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 pr-10"
             />
+               <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-2 top-3 text-gray-600 hover:text-gray-800"
+            >
+              {showPassword ? "❌" : "👁️"}
+            </button>
           </div>
 
           {errors.senha && (
