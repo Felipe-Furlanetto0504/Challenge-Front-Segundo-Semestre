@@ -12,7 +12,7 @@ export default function Contato() {
       Contato
     </h1>
 
-    <section className="p-4 sm:p-6 bg-[#e6f9fc] space-y-6 sm:space-y-8 flex flex-col items-center min-h-screen min-w-screen">
+    <section className="p-4 sm:p-6 bg-[#e6f9fc] space-y-6 sm:space-y-8 flex flex-col items-center min-h-screen ">
       <div className="w-full max-w-3xl">
         <h2 className="font-semibold italic text-gray-800 text-base sm:text-lg">
           Endereço:

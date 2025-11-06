@@ -25,21 +25,27 @@ export default function VisualizarRemedios() {
     })();
   }, [id]);
 
-  return (
-    <main>
-      <h1 className="bg-[#e6f9fc] text-3xl space-y-4 p-4 text-cyan-700">
-        Ver Remédios
-      </h1>
-      {remedio ? (
+ return (
+  <main className="min-h-screen bg-[#e6f9fc] flex flex-col items-center p-4 sm:p-6">
+    <h1 className="text-2xl sm:text-3xl font-bold text-cyan-700 text-center sm:text-left w-full max-w-4xl mb-4">
+      Ver Remédios
+    </h1>
+
+    {remedio ? (
+      <div className="w-full max-w-4xl">
         <Informacoes
           idprops={remedio.id}
           nomeprops={remedio.nome}
           precoprops={remedio.preco}
           descricaoprops={remedio.descricao}
         />
-      ) : (
-        <p>Não tem esse remédio disponível</p>
-      )}
-    </main>
-  );
+      </div>
+    ) : (
+      <p className="text-gray-700 text-center text-sm sm:text-base mt-6">
+        Não tem esse remédio disponível
+      </p>
+    )}
+  </main>
+);
+
 }
