@@ -1,38 +1,61 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import type { Cadastro } from "../../types/cadastro";
 
 export default function Cadastro() {
+  const URL_API = "http://localhost:8080/login";
   const navigate = useNavigate();
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
+  useEffect(() => {
+    document.title = "Cadastro";
+  }, []);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Cadastro>();
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-
   const onSubmit = async (data: Cadastro) => {
     try {
-      const response = await fetch("http://localhost:3000/pacientes", {
+      const checkRes = await fetch(`${URL_API}`);
+      if (!checkRes.ok) throw new Error("Erro ao buscar usuários");
+
+      const existingUsers: Cadastro[] = await checkRes.json();
+
+      // Verifica se já existe um usuário com o mesmo nome
+      const userExists = existingUsers.some(
+        (user) => user.usuario.toLowerCase() === data.usuario.toLowerCase()
+      );
+
+      if (userExists) {
+        alert("Usuário já cadastrado.");
+        return;
+      }
+
+      const createRes = await fetch(URL_API, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) throw new Error("Erro ao cadastrar");
+      if (!createRes.ok) throw new Error("Erro ao cadastrar paciente");
 
-      setSuccessMessage("Cadastro realizado");
-      setTimeout(() => {
-        navigate("/remedios");
-      }, 2000);
+      const pacienteRes = await fetch(`${URL_API}?usuario=${data.usuario}`);
+      const pacienteCriado: Cadastro[] = await pacienteRes.json();
+
+      localStorage.setItem("Usuario", data.usuario);
+      localStorage.setItem("idPaciente", pacienteCriado[0].idLogin.toString());
+
+      alert("Cadastro realizado com sucesso!");
+      navigate("/");
     } catch (error) {
       console.error(error);
-      alert("Erro ao cadastrar. Tente novamente.");
+      alert("Erro ao cadastrar paciente.");
     }
   };
 
@@ -54,14 +77,14 @@ export default function Cadastro() {
             Email:
           </label>
           <input
-            type="email"
-            placeholder="SeuEmail@.com"
-            {...register("email", { required: "O email é obrigatório" })}
+            type="text"
+            placeholder="SeuNome"
+            {...register("usuario", { required: "O Nome é obrigatório" })}
             className="mt-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base"
           />
-          {errors.email && (
+          {errors.usuario && (
             <span className="text-red-600 text-xs sm:text-sm mt-1">
-              {errors.email.message}
+              {errors.usuario.message}
             </span>
           )}
 

@@ -11,7 +11,7 @@ export default function Remedios() {
 
   useEffect(() => {
     const fetchRemedios = async () => {
-      const response = await fetch("http://localhost:3000/remedios");
+      const response = await fetch("http://localhost:8080/remedios");
       const data: Tiporemedio[] = await response.json();
       setRemedios(data);
     };
@@ -42,12 +42,12 @@ export default function Remedios() {
                 key={id}
                 className="border-b hover:bg-[#18738099] transition-colors"
               >
-                <td className="px-3 sm:px-6 py-2">{remedios.id}</td>
-                <td className="px-3 sm:px-6 py-2">{remedios.nome}</td>
-                <td className="px-3 sm:px-6 py-2">{remedios.preco}</td>
+                <td className="px-3 sm:px-6 py-2">{remedios.id_remedio}</td>
+                <td className="px-3 sm:px-6 py-2">{remedios.nome_remedio}</td>
+                <td className="px-3 sm:px-6 py-2">{remedios.preco_remedio}</td>
                 <td className="px-3 sm:px-6 py-2">
                   <Link
-                    to={`/visualizar/remedios/${remedios.id}`}
+                    to={`/visualizar/remedios/${remedios.id_remedio}`}
                     className="text-cyan-900 hover:underline"
                   >
                     Ver

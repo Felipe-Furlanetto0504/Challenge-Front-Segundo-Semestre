@@ -1,6 +1,6 @@
 export type Tiporemedio = {
-  id: number;
-  nome: string;
-  preco: number;
-  descricao: string;
+  id_remedio: number;
+  nome_remedio: string;
+  preco_remedio: number;
+  descricao_remedio: string;
 };

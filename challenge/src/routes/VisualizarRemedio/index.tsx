@@ -14,7 +14,7 @@ export default function VisualizarRemedios() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch(`http://localhost:3000/remedios/${id}`);
+        const response = await fetch(`http://localhost:8080/remedios/${id}`);
         if (!response.ok) throw new Error("Erro na API");
         const data: Tiporemedio = await response.json();
 
@@ -34,10 +34,10 @@ export default function VisualizarRemedios() {
     {remedio ? (
       <div className="w-full max-w-4xl">
         <Informacoes
-          idprops={remedio.id}
-          nomeprops={remedio.nome}
-          precoprops={remedio.preco}
-          descricaoprops={remedio.descricao}
+          idprops={remedio.id_remedio}
+          nomeprops={remedio.nome_remedio}
+          precoprops={remedio.preco_remedio}
+          descricaoprops={remedio.descricao_remedio}
         />
       </div>
     ) : (
