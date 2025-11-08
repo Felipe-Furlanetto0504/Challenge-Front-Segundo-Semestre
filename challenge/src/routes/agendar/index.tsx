@@ -21,7 +21,7 @@ export default function Agendar() {
     setLoading(true);
 
     try {
-      // Monta a data completa no formato esperado pelo Oracle: dd/mm/yyyy hh24:mi
+      
       const datahora_consulta =
         `${formData.data.split("-").reverse().join("/")}` + ` ${formData.hora}`;
 
@@ -60,7 +60,7 @@ export default function Agendar() {
   };
 
   return (
-    <section className="bg-[#f2f9ff] min-h-screen min-w-screen flex items-center justify-center p-4">
+    <section className="bg-[#e6f9fc] min-h-screen min-w-screen flex items-center justify-center p-4">
       <div className="bg-white w-full max-w-md rounded-2xl shadow-lg border border-gray-200 p-6">
         <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Agendar Consulta
@@ -75,11 +75,12 @@ export default function Agendar() {
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-1">
-              Nome do Paciente
+              Nome do Usuário
             </label>
             <input
               type="text"
               name="nome_consulta"
+              placeholder="SeuNome"
               value={formData.nome_consulta}
               onChange={handleChange}
               required

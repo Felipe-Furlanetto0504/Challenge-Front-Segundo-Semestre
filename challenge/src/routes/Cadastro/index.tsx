@@ -27,7 +27,7 @@ export default function Cadastro() {
 
       const existingUsers: Cadastro[] = await checkRes.json();
 
-      // Verifica se já existe um usuário com o mesmo nome
+      // Verifica duplicidade de usuário
       const userExists = existingUsers.some(
         (user) => user.usuario.toLowerCase() === data.usuario.toLowerCase()
       );
@@ -51,8 +51,14 @@ export default function Cadastro() {
       localStorage.setItem("Usuario", data.usuario);
       localStorage.setItem("idPaciente", pacienteCriado[0].idLogin.toString());
 
-      alert("Cadastro realizado com sucesso!");
-      navigate("/");
+      
+      setSuccessMessage("Cadastro realizado com sucesso! Redirecionando...");
+      
+      
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
+
     } catch (error) {
       console.error(error);
       alert("Erro ao cadastrar paciente.");
@@ -74,7 +80,7 @@ export default function Cadastro() {
 
         <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
           <label className="mt-4 font-medium text-sm sm:text-base">
-            Email:
+            Nome De Usuário:
           </label>
           <input
             type="text"

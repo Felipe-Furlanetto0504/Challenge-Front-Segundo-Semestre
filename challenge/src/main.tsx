@@ -10,7 +10,6 @@ import Contato from "./routes/Contato/index.tsx";
 import Sobre from "./routes/Sobre/index.tsx";
 import "./global.css";
 import Remedios from "./routes/Remedios/index.tsx";
-import VisualizarRemedios from "./routes/VisualizarRemedio/index.tsx";
 import Cadastro from "./routes/Cadastro/index.tsx";
 import Agendar from "./routes/agendar/index.tsx";
 
@@ -27,7 +26,6 @@ const router = createBrowserRouter([
       { path: "/faq", element: <Faq /> },
       { path: "/sobre", element: <Sobre /> },
       { path: "/remedios", element: <Remedios /> },
-      { path: "/visualizar/remedios/:id", element: <VisualizarRemedios /> },
       { path: "/cadastro", element: <Cadastro /> },
       { path: "/agendar", element: <Agendar/>},
     ],
