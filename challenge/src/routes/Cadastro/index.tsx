@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import type { Cadastro } from "../../types/cadastro";
 
 export default function Cadastro() {
-  const URL_API = "http://localhost:8080/login";
+  const URL_API = "https://challenge-api-1y4i.onrender.com/login";
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);

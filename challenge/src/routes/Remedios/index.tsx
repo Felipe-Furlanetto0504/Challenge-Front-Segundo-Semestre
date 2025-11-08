@@ -10,7 +10,7 @@ export default function Remedios() {
 
   const fetchRemedios = async () => {
     try {
-      const response = await fetch("http://localhost:8080/remedios");
+      const response = await fetch("https://challenge-api-1y4i.onrender.com/remedios");
       if (!response.ok) throw new Error("Erro ao buscar os remédios.");
       const data: Tiporemedio[] = await response.json();
       setRemedios(data);
@@ -28,7 +28,7 @@ export default function Remedios() {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:8080/remedios/${id}`, {
+      const response = await fetch(`https://challenge-api-1y4i.onrender.com/remedios/${id}`, {
         method: "DELETE",
       });
 
