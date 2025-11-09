@@ -1,4 +1,5 @@
 export type Cadastro = {
-  email: string;
+  usuario: string;
   senha: string;
+  idLogin: number;
 };

@@ -5,18 +5,26 @@ João Victor Caetano Alves da Silva Rm: 562074
 Turma: 1TDSPF
 
 Tecnologia:
-React,Vite,TypeScript,CSS,HTML,Tailwindcss,Router Dom,Api,json,node.js e hook-forms
+React, Vite, TypeScript, CSS, HTML, Tailwindcss, Router Dom, Api, json, node.js, hook-forms, vercel, git flow, java, render
 
 Imagens e ícones relacionados:
-felipe.jpg,hc.png,joao.jpg,joaocc.jpg,medico.jpg
+felipe.jpg, hc.png(ícone), joao.jpg, joaocc.jpg e medico.jpg
 
 Link do GitHub:
 https://github.com/Felipe-Furlanetto0504/challenge_front
 
 Link do Vídeo do YouTube:
-https://www.youtube.com/watch?v=63o8GDBTfgg
+https://youtu.be/rdQYNDMLZFM
 
-Estruturas de pastas: chalenge_front, challenge, node_modules, 
-src, components,cabecalho, informacoes, menu, rodape,
-data,img,routes, cadastro, contato, error, faq, home, integrantes, remedios, sobre,visualizarRemedios e
-types
+Link da Vercel:
+https://challenge-r8jburlam-felipe-furlanettos-projects.vercel.app
+
+Estruturas de pastas:
+primeiro foi criada a pasta challenge_front e dentro foi criada o projeto com o nome challenge
+que dentro dela foi dada o comando npm i para criar os arquivos do projeto,depois removemos os arquivos desnecessarios do projeto, mantendo a node_modules, ja dentro de src criamos a pasta components com as pastas cabecalho, menu, rodape.
+
+Criamos a pasta img que contem as imagens, types que contem qual é o tipo das informaçoes de login e remedios e também a pasta routes que contem as paginas do projeto essas sendo cadastro, contato, error, faq, home, integrantes, remedios, sobre.
+
+Sobre O Projeto:
+Esse projeto do hc tem como base ajudar pessoas com idade mais avançada, a marcar consultas com mais facilidade e também
+responder algumas duvidas que eles possam ter ao realizar o agendamento da consulta.
