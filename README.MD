@@ -17,7 +17,7 @@ Link do Vídeo do YouTube:
 https://youtu.be/rdQYNDMLZFM
 
 Link da Vercel:
-
+https://challenge-r8jburlam-felipe-furlanettos-projects.vercel.app
 
 Estruturas de pastas:
 primeiro foi criada a pasta challenge_front e dentro foi criada o projeto com o nome challenge
