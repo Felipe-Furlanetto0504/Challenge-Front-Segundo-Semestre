@@ -49,7 +49,7 @@ export default function Remedios() {
       </h1>
 
       <section className="bg-[#e6f9fc] min-h-screen p-3 sm:p-6 flex justify-center">
-        <div className="w-full max-w-6xl overflow-x-auto rounded-lg shadow-md border border-gray-300 bg-[#37a1b1]">
+        <div className="w-full max-w-6xl h-150 overflow-x-auto rounded-lg shadow-md border border-gray-300 bg-[#37a1b1]">
           <table className="min-w-full text-xs sm:text-sm md:text-base border-collapse">
             <thead className="bg-cyan-700 text-white">
               <tr>
@@ -87,7 +87,7 @@ export default function Remedios() {
 
             <tfoot className="bg-[#71aab399] text-gray-700 font-medium">
               <tr>
-                <td colSpan={6} className="px-3 sm:px-6 py-3 text-center md:text-left">
+                <td colSpan={6} className="px-3 sm:px-3 py-3 text-center md:text-left">
                   Total de Rémedios: {remedios.length}
                 </td>
               </tr>
