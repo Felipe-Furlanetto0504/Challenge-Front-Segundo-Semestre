@@ -1,7 +1,6 @@
 export type Consulta = {
-  nome: string;
-  email: string;
-  data: string;
-  hora: string;
-  observacoes: string;
-}
+  id_consulta: number;              
+  datahora_consulta: string;         
+  descricao_consulta: string;       
+  nome_consulta: string;             
+};
