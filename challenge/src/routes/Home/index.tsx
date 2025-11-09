@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import medico from "../../img/medico.jpg";
+
 
 export default function Home() {
   useEffect(() => {
@@ -14,7 +16,7 @@ return (
     <section className="min-h-screen bg-[#e6f9fc] flex flex-col items-center justify-center p-4 sm:p-6">
       <div className="p-4 flex flex-col items-center max-w-full sm:max-w-4xl">
         <img
-          src="./src/img/medico.jpg"
+          src={medico}
           alt="Médico"
           className="rounded-md shadow-md w-64 sm:w-80 md:w-[500px] h-auto object-cover"
         />

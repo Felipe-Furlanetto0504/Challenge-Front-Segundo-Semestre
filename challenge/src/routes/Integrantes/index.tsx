@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+import felipe from "../../img/felipe.jpg";
+import joao from "../../img/joao.jpg";
+import joaocc from "../../img/joaocc.jpg";
 
 export default function Integrantes() {
   useEffect(() => {
@@ -14,7 +17,7 @@ export default function Integrantes() {
     <section className="flex flex-col sm: justify-center items-center gap-6 sm:gap-8 p-4 sm:p-6 bg-[#e6f9fc]">
       <div className="bg-white border border-gray-300 rounded-lg shadow-md p-4 sm:p-6 w-64 sm:w-72 text-center transition-transform hover:scale-105">
         <img
-          src="./src/img/felipe.jpg"
+          src={felipe}
           alt="Felipe Furlanetto"
           className="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-md object-cover"
         />
@@ -41,7 +44,7 @@ export default function Integrantes() {
 
       <div className="bg-white border border-gray-300 rounded-lg shadow-md p-4 sm:p-6 w-64 sm:w-72 text-center transition-transform hover:scale-105">
         <img
-          src="./src/img/joao.jpg"
+          src={joao}
           alt="João Victor Bueno Castelini da Silva"
           className="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-md object-cover"
         />
@@ -68,7 +71,7 @@ export default function Integrantes() {
 
       <div className="bg-white border border-gray-300 rounded-lg shadow-md p-4 sm:p-6 w-64 sm:w-72 text-center transition-transform hover:scale-105">
         <img
-          src="./src/img/joaocc.jpg"
+          src={joaocc}
           alt="João Victor Caetano Alves da Silva"
           className="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-md object-cover"
         />
